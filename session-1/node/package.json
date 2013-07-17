@@ -1,0 +1,11 @@
+{
+	"name": "node-pi-perg",
+	"description": "node pi perg",
+	"version": "0.0.1",
+	"author": "hachr",
+	"dependencies": {
+		"onoff":"*",
+		"microtime":"*",
+		"q":"*"
+	}
+}
