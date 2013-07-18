@@ -2,8 +2,9 @@ from led import LED
 
 led = LED(27)
 
-led.turnOn()
+while(True):
+	led.turnOn()
 
-led.wait(1)
+	led.wait(1)
 
-led.turnOff()
+	led.turnOff()
