@@ -5,7 +5,6 @@
 	"author": "hachr",
 	"dependencies": {
 		"onoff":"*",
-		"microtime":"*",
-		"q":"*"
+		"microtime":"*"
 	}
 }

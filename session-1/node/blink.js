@@ -1,29 +1,26 @@
 var LED = require('./led');
-var Q = require('q');
 
 var led = new LED(27);
 
 function blink(){
-	var defered = Q.defer();
 	led.turnOn(function(){
 		setTimeout(function(){
 			led.turnOff();
-			defered.resolve();
+
+			//recursively call it again to loop
+			setTimeout(function(){
+				blink();
+			},500);
+
 		},200);
 	});
-	return defered.promise;
 }
 
+//call the blink
+blink();
 
-blink().then(function(){
-	return blink();
-}).then(function(){
-	return blink();
-});
-
-
-
-setTimeout(function(){
+//capture ctrl-c so we can clean up
+process.on('SIGINT', function(){
 	led.cleanup();
-},6000);
-
+	process.exit(0);
+});

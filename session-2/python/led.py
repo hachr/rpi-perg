@@ -18,13 +18,8 @@ class LED:
 	def turnOff(self):
 		GPIO.output(self.pin,True)
 
-	def blink(self, blinkingDelay = 0.5):
-		delay = float(blinkingDelay/2)
-		self.turnOff()
-		self.wait(delay)
-		self.turnOn()
-		self.wait(delay)
-		self.turnOff()
+	def isOn(self):
+		return False
 
 	def wait(self,interval):
 		time.sleep(interval)
