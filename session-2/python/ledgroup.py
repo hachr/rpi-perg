@@ -24,6 +24,26 @@ class LedGroup:
 	def blinkFromLast(self, blinkingDelay = 0.5):
 		for led in reversed(self.leds):
 			led.blink()
+	def onFromFirst(self, delay = 0.5):
+		for led in self.leds:
+			led.turnOn()
+			self.wait(delay)
+
+	def onFromLast(self, delay = 0.5):
+		for led in reversed(self.leds):
+			led.turnOn()
+			self.wait(delay)
+
+	def offFromFirst(self, delay = 0.5):
+		for led in self.leds:
+			led.turnOff()
+			self.wait(delay)
+
+	def offFromLast(self, delay = 0.5):
+		for led in reversed(self.leds):
+			led.turnOff()
+			self.wait(delay)
+
 
 	#blink individual light
 	def blink(self, index = 0, blinkingDelay = 0.5):
