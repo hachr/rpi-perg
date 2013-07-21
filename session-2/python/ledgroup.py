@@ -42,12 +42,12 @@ class LedGroup:
 
 	#turn on all lights
 	def turnOnAll(self):
-		for led in self.leds
+		for led in self.leds:
 			led.turnOn()
 
 	#turn off all lights
 	def turnOffAll(self):
-		for led in self.leds
+		for led in self.leds:
 			led.turnOff()
 
 	#wait a bit
