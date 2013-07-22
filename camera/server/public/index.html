@@ -1,0 +1,85 @@
+<html>
+<head>
+<script src="js/libs/jquery-1.10.2.min.js"></script>
+<script>
+	$("document").ready(function(){
+		var video = document.getElementById('vid');
+		video.abort = function(e){
+console.log("abort");
+};
+video.canplay = function(e){
+console.log("canplay");
+};
+video.canplaythrough = function(e){
+console.log("canplaythrough");
+};
+video.durationchange = function(e){
+console.log("durationchange");
+};
+video.emptied = function(e){
+console.log("emptied");
+};
+video.ended = function(e){
+console.log("ended");
+};
+video.error = function(e){
+console.log("error");
+};
+video.loadeddata = function(e){
+console.log("loadeddata");
+};
+video.loadedmetadata = function(e){
+console.log("loadedmetadata");
+};
+video.loadstart = function(e){
+console.log("loadstart");
+};
+video.pause = function(e){
+console.log("pause");
+};
+video.play = function(e){
+console.log("play");
+};
+video.playing = function(e){
+console.log("playing");
+};
+video.progress = function(e){
+console.log("progress");
+};
+video.ratechange = function(e){
+console.log("ratechange");
+};
+video.seeked = function(e){
+console.log("seeked");
+};
+video.seeking = function(e){
+console.log("seeking");
+};
+video.stalled = function(e){
+console.log("stalled");
+};
+video.suspend = function(e){
+console.log("suspend");
+};
+video.timeupdate = function(e){
+console.log("timeupdate");
+};
+video.volumechange = function(e){
+console.log("volumechange");
+};
+video.waiting = function(e){
+console.log("waiting");
+};
+
+	
+
+	});
+</script>
+</head>
+<body>
+<video id="vid" width="640" height="400" autoplay controls>
+  <source src="http://172.26.64.166:3001/video" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</body>
+</html>
