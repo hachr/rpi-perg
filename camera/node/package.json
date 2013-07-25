@@ -5,6 +5,8 @@
         "author": "hachr",
         "dependencies": {
                 "onoff":"*",
+                "picam":"*",
+                "lodash":"*",
 		"opencv":"*",
                 "microtime":"*",
                 "q":"*"
