@@ -23,7 +23,7 @@ class SR04Sensor:
 
 
 	# send out a ping value
-	def ping(self):
+	def check(self):
 		# Set trigger to False (Low)
 		GPIO.output(self.triggerPin, False)
 		
@@ -61,7 +61,7 @@ class SR04Sensor:
 
 		result = 0
 		for x in sequence(numberOfAttempts):
-			result = result + self.ping()
+			result = result + self.check()
 
 		return result / numberOfAttempts
 
