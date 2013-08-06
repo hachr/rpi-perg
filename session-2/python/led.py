@@ -10,13 +10,13 @@ class LED:
 			raise Exception("Cannot use pin higher than 30")
 		GPIO.setmode(GPIO.BCM) #switch mode
 		GPIO.setwarnings(False)
-		GPIO.setup(self.pin,GPIO.OUT)
+		GPIO.setup(self.pin,GPIO.OUT,initial=GPIO.LOW)
 
 	def turnOn(self):
-		GPIO.output(self.pin,False)
+		GPIO.output(self.pin,True)
 
 	def turnOff(self):
-		GPIO.output(self.pin,True)
+		GPIO.output(self.pin,False)
 
 	def blink(self, blinkingDelay = 0.5):
 		delay = float(blinkingDelay/2)
