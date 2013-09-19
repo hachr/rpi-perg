@@ -40,6 +40,7 @@ Use SiriProxy:
 	go to rpi-perg/session-3/ and run npm install
 	once everything is installed, run sudo node demo
 	use siri to send the following commands: hello, turn on, turn off, and blink
+	change the pin from 23 to whatever pin you use to trigger the LED.
 
 Troubleshoot:
 
