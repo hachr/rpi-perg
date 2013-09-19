@@ -1,0 +1,46 @@
+Requirements:
+
+	node.js (0.10)
+	git
+
+Preparation:
+
+	sudo apt-get update
+	sudo apt-get upgrade
+	sudo apt-get install dnsmasq (optional - if you want to run dns server yourself)
+
+Get the code:
+
+	git clone https://github.com/hachr/rpi-perg
+
+Setting up:
+
+	cd rpi-perg/session-3
+	npm install
+
+If you use dnsmasq:
+
+	edit /etc/dnsmasq.conf and add guzzoni.apple.com <your raspberry pi ip>
+	to stop the dnsmasq, run sudo service dnsmasq stop
+	to start the dnsmasq, run sudo service dnsmasq start 
+
+
+Set up your phone (first time, you need to install the certificate for siri to work):
+
+	cd rpi-perg/session-3/node_modules/siri/
+	sudo node install
+	go to network setting on your phone and change the DNS field of the WIFI to point to the raspberry pi ip address.
+	open up safari and go to http://guzzoni.apple.com. It should show you a link to install the certificate
+	install the certificate and ignore the warning
+	shut down the node install process (ctrl-c or kill the terminal)
+
+Use SiriProxy:
+
+	go to your pi, and run git clone https://github.com/hachr/rpi-perg if you haven't done it so
+	go to rpi-perg/session-3/ and run npm install
+	once everything is installed, run sudo node demo
+	use siri to send the following commands: hello, turn on, turn off, and blink
+
+Troubleshoot:
+
+	if siri doesn't send command to your proxy, try to turn off wifi, turn it back on and give it a few seconds and try again.
