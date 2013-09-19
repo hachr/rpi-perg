@@ -1,0 +1,13 @@
+{
+  "name": "session-3",
+  "version": "0.0.0",
+  "description": "siriproxy + gpio",
+  "main": "demo.js",
+  "dependencies": {
+    "siri": "*",
+    "onoff": "*"
+  },
+  "repository": "",
+  "author": "",
+  "license": "MIT"
+}
